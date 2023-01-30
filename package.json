@@ -10,11 +10,19 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.6",
     "@strapi/plugin-i18n": "4.6.0",
     "@strapi/plugin-users-permissions": "4.6.0",
     "@strapi/strapi": "4.6.0",
+    "axios": "^1.2.6",
     "better-sqlite3": "7.4.6",
-    "pg": "^8.9.0"
+    "pg": "^8.9.0",
+    "react-redux": "^8.0.5",
+    "redux": "^4.2.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.4.2"
   },
   "author": {
     "name": "A Strapi developer"
