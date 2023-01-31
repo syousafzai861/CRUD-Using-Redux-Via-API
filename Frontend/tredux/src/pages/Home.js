@@ -9,7 +9,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { useSelector, useDispatch } from "react-redux";
 import { loadUsers } from "../redux/actions";
-
+import { Button, ButtonGroup } from "@mui/material";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -52,12 +52,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 const Home = () => {
   let dispatch = useDispatch();
 
-
-const {users} = useSelector((state) => state.data);
- 
-
-
-
+  const { users } = useSelector((state) => state.data);
 
   useEffect(() => {
     dispatch(loadUsers());
@@ -85,16 +80,18 @@ const {users} = useSelector((state) => state.data);
                 <StyledTableCell component="th" scope="row">
                   {user.name}
                 </StyledTableCell>
+                <StyledTableCell align="center">{user.email}</StyledTableCell>
+                <StyledTableCell align="center">{user.contact}</StyledTableCell>
+                <StyledTableCell align="center">{user.address}</StyledTableCell>
                 <StyledTableCell align="center">
-                  {user.email}
+                  <ButtonGroup
+                    variant="contained"
+                    aria-label="contained primary button group"
+                  >
+                    <Button style={{marginRight:"5px"}} color="error">Delete</Button>
+                    <Button  color="primary">Edit</Button>
+                  </ButtonGroup>
                 </StyledTableCell>
-                <StyledTableCell align="center">
-                  {user.contact}
-                </StyledTableCell>
-                <StyledTableCell align="center">
-                  {user.address}
-                </StyledTableCell>
-                <StyledTableCell align="center"></StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
