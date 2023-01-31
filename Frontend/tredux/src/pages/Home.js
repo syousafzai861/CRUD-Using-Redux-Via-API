@@ -104,7 +104,7 @@ const Home = () => {
                     aria-label="contained primary button group"
                   >
                     <Button style={{marginRight:"5px"}} color="error" onClick={()=> handledelete(user.id)}>Delete</Button>
-                    <Button  color="primary">Edit</Button>
+                    <Button  color="primary" onClick={()=> navigate(`/edituser/${user.id}`)}>Edit</Button>
                   </ButtonGroup>
                 </StyledTableCell>
               </StyledTableRow>

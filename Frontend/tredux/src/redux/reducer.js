@@ -20,10 +20,17 @@ const userReducers = (state = initialstate, action) => {
         loading: false,
       };
     case types.ADD_USERS:
+    case types.UPDATE_USERS:
       return {
         ...state,
         loading: false,
       };
+    case types.GET_SINGLE_USER:
+        return {
+          ...state,
+          user:action.payload,
+          loading: false,
+        };
     default:
       return state;
   }

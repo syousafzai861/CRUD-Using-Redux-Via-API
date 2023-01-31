@@ -1,9 +1,9 @@
 {
   "user": [
     {
-      "name": "saif",
-      "email": "saif@gmail.com",
-      "address": "america",
+      "name": "saif updated",
+      "email": "saifupdated@gmail.com",
+      "address": "america updated",
       "contact": "23423423",
       "id": 2
     },
@@ -20,6 +20,13 @@
       "address": "garden south ",
       "contact": "23420348244",
       "id": 4
+    },
+    {
+      "name": "shoib",
+      "email": "shoib@gmail.com",
+      "address": "house no 345 ",
+      "contact": "34234234234",
+      "id": 5
     }
   ]
 }
