@@ -8,7 +8,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { useSelector, useDispatch } from "react-redux";
-import { loadUsers } from "../redux/actions";
+import { deleteUser, loadUsers } from "../redux/actions";
 import { Button, ButtonGroup } from "@mui/material";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -49,15 +49,24 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 //   createData("Gingerbread", 356, 16.0, 49, 3.9),
 // ];
 
+
 const Home = () => {
+  //MAKING A DISPATCH USER
   let dispatch = useDispatch();
-
+  //IMPORTING THE STATE
   const { users } = useSelector((state) => state.data);
-
+  //DEFINED IN USE STATE BECAUSE WE WANT THIS TO RUN EVERYTIME WHEN THE STATES GOT CHANGED 
   useEffect(() => {
     dispatch(loadUsers());
   }, []);
-
+  
+ //DELETE FUNCTION FOR THE USER
+  const handledelete=(id)=>{
+    if(window.confirm("Are you sure you want to delte?")){
+      dispatch(deleteUser(id));
+    }
+  
+  }
   return (
     <div>
       <TableContainer component={Paper}>
@@ -88,7 +97,7 @@ const Home = () => {
                     variant="contained"
                     aria-label="contained primary button group"
                   >
-                    <Button style={{marginRight:"5px"}} color="error">Delete</Button>
+                    <Button style={{marginRight:"5px"}} color="error" onClick={()=> handledelete(user.id)}>Delete</Button>
                     <Button  color="primary">Edit</Button>
                   </ButtonGroup>
                 </StyledTableCell>
