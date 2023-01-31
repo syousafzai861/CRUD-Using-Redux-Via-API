@@ -10,7 +10,8 @@ import Paper from "@mui/material/Paper";
 import { useSelector, useDispatch } from "react-redux";
 import { deleteUser, loadUsers } from "../redux/actions";
 import { Button, ButtonGroup } from "@mui/material";
-
+import {useNavigate} from "react-router-dom";
+ 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: theme.palette.common.black,
@@ -53,6 +54,8 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 const Home = () => {
   //MAKING A DISPATCH USER
   let dispatch = useDispatch();
+  //Routing object 
+  let navigate = useNavigate();
   //IMPORTING THE STATE
   const { users } = useSelector((state) => state.data);
   //DEFINED IN USE STATE BECAUSE WE WANT THIS TO RUN EVERYTIME WHEN THE STATES GOT CHANGED 
@@ -69,6 +72,9 @@ const Home = () => {
   }
   return (
     <div>
+      <div style={{marginTop:"10px"}}>
+      <Button  variant="contained" color="primary" onClick={()=> navigate("/adduser") }>ADD USER</Button>
+      </div>
       <TableContainer component={Paper}>
         <Table
           sx={{ minWidth: 900, marginTop: "100px" }}
