@@ -65,7 +65,7 @@ const Home = () => {
   
  //DELETE FUNCTION FOR THE USER
   const handledelete=(id)=>{
-    if(window.confirm("Are you sure you want to delte?")){
+    if(window.confirm("Are you sure you want to delete?")){
       dispatch(deleteUser(id));
     }
   
