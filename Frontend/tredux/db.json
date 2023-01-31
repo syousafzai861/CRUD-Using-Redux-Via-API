@@ -1,0 +1,32 @@
+{
+    "user":[
+        {
+            "name":"Adam",
+            "email":"adam@gmail.com",
+            "address":"australlia",
+            "contact":"23423423",
+            "id": 1
+        },
+        {
+            "name":"saif",
+            "email":"saif@gmail.com",
+            "address":"america",
+            "contact":"23423423",
+            "id": 2
+        },
+        {
+            "name":"zain",
+            "email":"zain@gmail.com",
+            "address":"london",
+            "contact":"23423423",
+            "id": 3
+        },
+        {
+            "name":"ahsan",
+            "email":"ahsan@gmail.com",
+            "address":"UK",
+            "contact":"23423423",
+            "id": 4
+        }
+    ]
+}
