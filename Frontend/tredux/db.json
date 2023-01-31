@@ -1,18 +1,25 @@
 {
   "user": [
     {
-      "name": "Adam",
-      "email": "adam@gmail.com",
-      "address": "australlia",
-      "contact": "23423423",
-      "id": 1
-    },
-    {
       "name": "saif",
       "email": "saif@gmail.com",
       "address": "america",
       "contact": "23423423",
       "id": 2
+    },
+    {
+      "name": "Talha Yameen",
+      "email": "talha@gmail.com",
+      "address": "uAE",
+      "contact": "03322161034",
+      "id": 3
+    },
+    {
+      "name": "jawad sir",
+      "email": "jawad@gmail.com",
+      "address": "garden south ",
+      "contact": "23420348244",
+      "id": 4
     }
   ]
 }
